@@ -67,9 +67,9 @@
     <link href="http://www.djangoz.com/2017/08/16/linux_setup_ssr/"/>
     <id>http://www.djangoz.com/2017/08/16/linux_setup_ssr/</id>
     <published>2017-08-15T16:00:00.000Z</published>
-    <updated>2017-08-17T08:52:54.010Z</updated>
+    <updated>2017-08-17T11:57:57.000Z</updated>
     
-    <content type="html"><![CDATA[<p>ssr 相比于ss 更加稳定，推荐安装ssr<br>之前在网上找很久没找到如何在Linux环境下运行ssr，后来通过这个脚本安装ssr，亲测可用<br>安装以后可通过　ssr start或者　ssr config　命令运行ssr<br>使用root用户登录，运行以下命令：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> https://github.com/onlyless/linux_setup_ssr.git</div><div class="line">sudo mv linux_setup_ssr/ssr /usr/<span class="built_in">local</span>/bin</div><div class="line">rm -rf linux_setup_ssr</div><div class="line">sudo chmod 766 /usr/<span class="built_in">local</span>/bin/ssr</div><div class="line">ssr install</div><div class="line">ssr config</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>ssr 相比于ss 更加稳定，推荐安装ssr<br>之前在网上找很久没找到如何在Linux环境下运行ssr，后来通过这个脚本安装ssr，亲测可用<br>安装以后可通过　ssr start或者　ssr config　命令运行ssr<br>使用root用户登录，运行以下命令：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">wget http://www.djangoz.com/linux_setup_ssr/ssr</div><div class="line">sudo mv ssr /usr/<span class="built_in">local</span>/bin</div><div class="line">sudo chmod 766 /usr/<span class="built_in">local</span>/bin/ssr</div><div class="line">ssr install</div><div class="line">ssr config</div></pre></td></tr></table></figure></p>
 <h4 id="ssr的配置就不说明了，很简单的"><a href="#ssr的配置就不说明了，很简单的" class="headerlink" title="ssr的配置就不说明了，很简单的"></a>ssr的配置就不说明了，很简单的</h4>]]></content>
     
     <summary type="html">
