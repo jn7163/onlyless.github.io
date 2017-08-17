@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>求二叉树的最大深度和最小深度 | Djangoz&#39;s blog | Just for fun.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="算法">
+    <meta name="description" content="运用递归的思想实现起来简单很多。 二叉树的定义123456struct TreeNode&amp;#123;    int val;    TreeNode *left,*right;    TreeNode()&amp;#123;&amp;#125;    TreeNode(int _val):val(_val),left(NULL),right(NULL)&amp;#123;&amp;#125;&amp;#125;; 具体实现二叉树就不写了">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求二叉树的最大深度和最小深度">
+<meta property="og:url" content="http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/index.html">
+<meta property="og:site_name" content="Djangoz&#39;s blog">
+<meta property="og:description" content="运用递归的思想实现起来简单很多。 二叉树的定义123456struct TreeNode&amp;#123;    int val;    TreeNode *left,*right;    TreeNode()&amp;#123;&amp;#125;    TreeNode(int _val):val(_val),left(NULL),right(NULL)&amp;#123;&amp;#125;&amp;#125;; 具体实现二叉树就不写了">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-08-17T09:01:54.772Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="求二叉树的最大深度和最小深度">
+<meta name="twitter:description" content="运用递归的思想实现起来简单很多。 二叉树的定义123456struct TreeNode&amp;#123;    int val;    TreeNode *left,*right;    TreeNode()&amp;#123;&amp;#125;    TreeNode(int _val):val(_val),left(NULL),right(NULL)&amp;#123;&amp;#125;&amp;#125;; 具体实现二叉树就不写了">
+    
+        <link rel="alternate" type="application/atom+xml" title="Djangoz&#39;s blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Djangoz</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">求二叉树的最大深度和最小深度</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">求二叉树的最大深度和最小深度</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-17T09:01:54.772Z" itemprop="datePublished" class="page-time">
+  2017-08-17
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二叉树的定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">二叉树的定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#求二叉树的最大深度"><span class="post-toc-number">2.</span> <span class="post-toc-text">求二叉树的最大深度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#求二叉树的最小深度"><span class="post-toc-number">3.</span> <span class="post-toc-text">求二叉树的最小深度</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-2017-8-15-Depth-of-Binary-tree"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">求二叉树的最大深度和最小深度</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-17 17:01:54" datetime="2017-08-17T09:01:54.772Z"  itemprop="datePublished">2017-08-17</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>运用递归的思想实现起来简单很多。</p>
+<h3 id="二叉树的定义"><a href="#二叉树的定义" class="headerlink" title="二叉树的定义"></a>二叉树的定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    TreeNode *left,*right;</div><div class="line">    TreeNode()&#123;&#125;</div><div class="line">    TreeNode(<span class="keyword">int</span> _val):val(_val),left(<span class="literal">NULL</span>),right(<span class="literal">NULL</span>)&#123;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>具体实现二叉树就不写了。</p>
+<h3 id="求二叉树的最大深度"><a href="#求二叉树的最大深度" class="headerlink" title="求二叉树的最大深度"></a>求二叉树的最大深度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(!root)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(!root-&gt;left) <span class="keyword">return</span> <span class="number">1</span>+maxDepth(root-&gt;right);</div><div class="line">    <span class="keyword">if</span>(!root-&gt;right) <span class="keyword">return</span> <span class="number">1</span>+maxDepth(root-&gt;left);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>+max(maxDepth(root-&gt;left),maxDepth(root-&gt;right));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="求二叉树的最小深度"><a href="#求二叉树的最小深度" class="headerlink" title="求二叉树的最小深度"></a>求二叉树的最小深度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(!root)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(!root-&gt;left) <span class="keyword">return</span> <span class="number">1</span>+minDepth(root-&gt;right);</div><div class="line">    <span class="keyword">if</span>(!root-&gt;right) <span class="keyword">return</span> <span class="number">1</span>+minDepth(root-&gt;left);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>+min(minDepth(root-&gt;left),minDepth(root-&gt;right));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-17T09:01:54.772Z" itemprop="dateUpdated">2017-08-17 17:01:54</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/08/17/2017-8-15-Depth-of-Binary-tree/" target="_blank" rel="external">http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.djangoz.com">
+            <img src="/img/avatar.jpg" alt="Djangoz">
+            Djangoz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&source=tech" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《求二叉树的最大深度和最小深度》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/&via=http://www.djangoz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/16/linux_setup_ssr/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">在linux环境安装shadowsocksR</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Djangoz &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&source=tech" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《求二叉树的最大深度和最小深度》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/&via=http://www.djangoz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/17/2017-8-15-Depth-of-Binary-tree/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACxUlEQVR42u3a0WrjMBAF0P7/T3dhnxaKk3tnpLYLx0/BOLaOA5JyZz4+4uPz7/H1879nvl7z9Xxyt6c7PF154MDDw8MbDf317ZIzr8GzoSfjeXMfPDw8vGu8fDF4ethmqUheUL6c4OHh4f0eXjLcdhu9WRjw8PDw/kde+zl/QXh4eHi/n5eEEflA2830Z3xczFrw8PDwYt6mAPZTn7+pvoeHh4e3mI7bjW8+WW+CiTdPxMPDw7vAy//8n115kuJZu1mPshY8PDy8o7xZxDALeZPFoz3z+Orx8PDwLvASar7lbaf+NibOGxTw8PDwbvDageYBQVtgm8UTb34YPDw8vMu8PEKdRa753ZJJPxoPHh4e3mXejJQHFsnWvI2J3wTQeHh4eBd4p5qu8iB4lhIcy1rw8PDwLuScs+1vHt1uwoi8APa47uHh4eGtefvCfBtetJvjNrp9/C4eHh7eNV57zO4wI62arvDw8PAO8YotabwM5O1Ws6JaMXI8PDy8C7z9TZNIt02UZ0Wsx2fh4eHhHeXti/1tQ0AbAedL0WNKjYeHh3eU1xaZZrC2cJWPZBjg4uHh4S14yRc2DQTt7v5U8wEeHh7ebV6yPc2n6WSKz5u6WvbjPwY8PDy8o7xZSJovKjNMXk4rttR4eHh4h3j7gn00TY8m/U1TFx4eHt4N3rCkVJLaMCI/n7eF4eHh4Z3itTFEEaGuWwfa111kLXh4eHgLXrt6JOB8m5s8ZdO4gIeHh3eD91kem1aA/H3PNtyr9AIPDw+vSwaGS0XSUrCf4tsGAjw8PLzv4c1ar9rtcrvVzlsT3iwVeHh4eNd4efzatme1r6POTpKFAQ8PD+8X8GZhbhtV5K/pTWcZHh4e3g/xNoFFGwfPMpXHMhgeHh7eBd5sOs4XhlnZbDMGPDw8vHu89q9+PqBZSez1NbMfAA8PD+8Q7w/zQ9B1j0+AqQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

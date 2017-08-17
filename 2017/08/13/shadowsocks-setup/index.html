@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>shadowsocks一键安装脚本 | Djangoz&#39;s blog | Just for fun.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="科学上网">
+    <meta name="description" content="本脚本适用环境系统支持：CentOS 6+，Debian 7+，Ubuntu 12+内存要求：≥128M 关于本脚本1、一键安装 Shadowsocks-Python， ShadowsocksR， Shadowsocks-Go， Shadowsocks-libev 版（四选一）服务端；2、各版本的启动脚本及配置文件名不再重合；3、每次运行可安装一种版本；4、支持以多次运行来安装多个版本，且各个版本">
+<meta name="keywords" content="科学上网">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shadowsocks一键安装脚本">
+<meta property="og:url" content="http://www.djangoz.com/2017/08/13/shadowsocks-setup/index.html">
+<meta property="og:site_name" content="Djangoz&#39;s blog">
+<meta property="og:description" content="本脚本适用环境系统支持：CentOS 6+，Debian 7+，Ubuntu 12+内存要求：≥128M 关于本脚本1、一键安装 Shadowsocks-Python， ShadowsocksR， Shadowsocks-Go， Shadowsocks-libev 版（四选一）服务端；2、各版本的启动脚本及配置文件名不再重合；3、每次运行可安装一种版本；4、支持以多次运行来安装多个版本，且各个版本">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2017-08-17T08:59:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shadowsocks一键安装脚本">
+<meta name="twitter:description" content="本脚本适用环境系统支持：CentOS 6+，Debian 7+，Ubuntu 12+内存要求：≥128M 关于本脚本1、一键安装 Shadowsocks-Python， ShadowsocksR， Shadowsocks-Go， Shadowsocks-libev 版（四选一）服务端；2、各版本的启动脚本及配置文件名不再重合；3、每次运行可安装一种版本；4、支持以多次运行来安装多个版本，且各个版本">
+    
+        <link rel="alternate" type="application/atom+xml" title="Djangoz&#39;s blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Djangoz</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/yscoder" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/ysweb" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">shadowsocks一键安装脚本</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">shadowsocks一键安装脚本</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-08-12T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2017-08-13
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#本脚本适用环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">本脚本适用环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于本脚本"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">关于本脚本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#默认配置"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">默认配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#客户端下载"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">客户端下载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用方法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">使用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装完成后，脚本提示如下"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">安装完成后，脚本提示如下</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#卸载方法"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">卸载方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动脚本"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">启动脚本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#各版本默认配置文件"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">各版本默认配置文件</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-shadowsocks-setup"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">shadowsocks一键安装脚本</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-08-13 00:00:00" datetime="2017-08-12T16:00:00.000Z"  itemprop="datePublished">2017-08-13</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="本脚本适用环境"><a href="#本脚本适用环境" class="headerlink" title="本脚本适用环境"></a>本脚本适用环境</h1><p><em>系统支持</em>：CentOS 6+，Debian 7+，Ubuntu 12+<br><em>内存要求</em>：≥128M</p>
+<h2 id="关于本脚本"><a href="#关于本脚本" class="headerlink" title="关于本脚本"></a>关于本脚本</h2><p>1、一键安装 Shadowsocks-Python， ShadowsocksR， Shadowsocks-Go， Shadowsocks-libev 版（四选一）服务端；<br>2、各版本的启动脚本及配置文件名不再重合；<br>3、每次运行可安装一种版本；<br>4、支持以多次运行来安装多个版本，且各个版本可以共存（注意端口号需设成不同）；<br>5、若已安装多个版本，则卸载时也需多次运行（每次卸载一种）；<br>6、Shadowsocks-Python 和 ShadowsocksR 安装后不可同时启动（因为本质上都属 Python 版）。</p>
+<p><strong>友情提示</strong>：如果你有问题，请先阅读这篇<a href="https://teddysun.com/399.html" target="_blank" rel="external">Shadowsocks Troubleshooting</a>之后再询问。</p>
+<h2 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h2><p><em>服务器端口</em>：自己设定（如不设定，默认为 8989）<br><em>密码</em>：自己设定（如不设定，默认为 teddysun.com）<br><em>加密方式</em>：自己设定（如不设定，Python 和 libev 版默认为 aes-256-gcm，R 和 Go 版默认为 aes-256-cfb）<br><em>协议（protocol）</em>：自己设定（如不设定，默认为 origin）（仅限 ShadowsocksR 版）<br><em>混淆（obfs）</em>：自己设定（如不设定，默认为 plain）（仅限 ShadowsocksR 版）<br><strong>备注：</strong>脚本默认创建单用户配置文件，如需配置多用户，请手动修改相应的配置文件后重启即可。</p>
+<h2 id="客户端下载"><a href="#客户端下载" class="headerlink" title="客户端下载"></a>客户端下载</h2><p>常规版 Windows 客户端<br><a target="_blank" href="https://github.com/shadowsocks/shadowsocks-windows/releases">https://github.com/shadowsocks/shadowsocks-windows/releases</a><br>ShadowsocksR 版 Windows 客户端<br><a target="_blank" href="https://github.com/shadowsocksr/shadowsocksr-csharp/releases">https://github.com/shadowsocksr/shadowsocksr-csharp/releases</a></p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>使用root用户登录，运行以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</div><div class="line">chmod +x shadowsocks-all.sh</div><div class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</div></pre></td></tr></table></figure>
+<h3 id="安装完成后，脚本提示如下"><a href="#安装完成后，脚本提示如下" class="headerlink" title="安装完成后，脚本提示如下"></a>安装完成后，脚本提示如下</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Congratulations, your_shadowsocks_version install completed!</div><div class="line">Your Server IP        :your_server_ip</div><div class="line">Your Server Port      :your_server_port</div><div class="line">Your Password         :your_password</div><div class="line">Your Encryption Method:your_encryption_method</div><div class="line"></div><div class="line">Welcome to visit:https://teddysun.com/486.html</div><div class="line">Enjoy it!</div></pre></td></tr></table></figure>
+<h3 id="卸载方法"><a href="#卸载方法" class="headerlink" title="卸载方法"></a>卸载方法</h3><p>若已安装多个版本，则卸载时也需多次运行（每次卸载一种）<br>使用root用户登录，运行以下命令：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./shadowsocks-all.sh uninstall</div></pre></td></tr></table></figure></p>
+<h3 id="启动脚本"><a href="#启动脚本" class="headerlink" title="启动脚本"></a>启动脚本</h3><p>启动脚本后面的参数含义，从左至右依次为：启动，停止，重启，查看状态。<br>Shadowsocks-Python 版：<br>/etc/init.d/shadowsocks-python start | stop | restart | status<br>ShadowsocksR 版：<br>/etc/init.d/shadowsocks-r start | stop | restart | status<br>Shadowsocks-Go 版：<br>/etc/init.d/shadowsocks-go start | stop | restart | status<br>Shadowsocks-libev 版：<br>/etc/init.d/shadowsocks-libev start | stop | restart | status</p>
+<h3 id="各版本默认配置文件"><a href="#各版本默认配置文件" class="headerlink" title="各版本默认配置文件"></a>各版本默认配置文件</h3><p>Shadowsocks-Python 版：<br>/etc/shadowsocks-python/config.json<br>ShadowsocksR 版：<br>/etc/shadowsocks-r/config.json<br>Shadowsocks-Go 版：<br>/etc/shadowsocks-go/config.json<br>Shadowsocks-libev 版：<br>/etc/shadowsocks-libev/config.json</p>
+<p><strong>注意：</strong>以上单版本不可与该四合一版本混用。</p>
+<p>转载自<a href="https://teddysun.com/486.html" target="_blank" rel="external">秋水逸冰</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-08-17T08:59:38.000Z" itemprop="dateUpdated">2017-08-17 16:59:38</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/08/13/shadowsocks-setup/" target="_blank" rel="external">http://www.djangoz.com/2017/08/13/shadowsocks-setup/</a>
+        
+    </div>
+    <footer>
+        <a href="http://www.djangoz.com">
+            <img src="/img/avatar.jpg" alt="Djangoz">
+            Djangoz
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/科学上网/">科学上网</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/&title=《shadowsocks一键安装脚本》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/&title=《shadowsocks一键安装脚本》 — Djangoz's blog&source=tech" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/13/shadowsocks-setup/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《shadowsocks一键安装脚本》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/&via=http://www.djangoz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/08/16/linux_setup_ssr/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">在linux环境安装shadowsocksR</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/08/12/wirte-something/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">先随便写写</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Djangoz &copy; 2015 - 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/&title=《shadowsocks一键安装脚本》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/&title=《shadowsocks一键安装脚本》 — Djangoz's blog&source=tech" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/13/shadowsocks-setup/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《shadowsocks一键安装脚本》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/&via=http://www.djangoz.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/13/shadowsocks-setup/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aO3LDMAwFQN//0kqbmTjWA0AXIleVJrZoLQsEH75e8XX9uX7//fP3k5WrTzUvDAyMxzKuj1f+neorJltT+F0MDIwDGMlL5HGv+lR1BQwMDIxkuTz4VkMtBgYGxtqA+x8vwefpIwYGBkZexCb3SWjOA/dXanEMDIwHMiaF5bfvvzLfwMDAeBTjKl75CkmoXfZWGBgYWzPyANcbQOarJUX1zQoYGBhbM5KQNw+R+dYkrxuFbwwMjC0YuTVv1k+erRbPbzJcDAyMwxh5GJ0PJpf9f8DAwNiOUS0ae+2wXumbN/gwMDBOYCRBsBpk843I3yHadAwMjO0Yk4NWvVbaJLn89x4DA+MAxqrjDkkR2wvTN4EYAwPjGEZeUuZN/CTdnBSxrzw2Y2BgPJzxOUHMSb0SdzLgxMDAOIdRTeB6g8bq0bHCWBQDA+Mwxvwne8273gZhYGCcxsgTter0sHfkq3DYAgMDY2tGtTWWl6zJmDNPOstHLjAwMLZmVBv3kzCatOcK5TQGBsaRjLWfztPB0SATAwNjI0avuV8NuL2W3M2mYGBgbMq4itd8YLkqKSxPRzEwMB7LWBaz47J20oCrroOBgbEToxpk89eqNu9GARcDA+MAxjzwVUeYvbTvJs/FwMDAaGWXeWOul3piYGBg9Ej5yHNSQr8pYjEwMLZmrDo2UTjIVRyONs+MYGBgbMGolo7VkeS8cK1uJQYGxkaMH+9qS6lrCxbPAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
