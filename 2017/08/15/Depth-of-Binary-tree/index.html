@@ -24,25 +24,25 @@ ga('send', 'pageview');
     
     
     
-    <title>先随便写写 | Djangoz&#39;s blog | Just for fun.</title>
+    <title>求二叉树的最大深度和最小深度 | Djangoz&#39;s blog | Just for fun.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="闲言碎语">
-    <meta name="description" content="A ton of text to test readability.">
-<meta name="keywords" content="闲言碎语">
+    <meta name="keywords" content="算法">
+    <meta name="description" content="运用递归的思想实现起来简单很多。 二叉树的定义123456struct TreeNode&amp;#123;    int val;    TreeNode *left,*right;    TreeNode()&amp;#123;&amp;#125;    TreeNode(int _val):val(_val),left(NULL),right(NULL)&amp;#123;&amp;#125;&amp;#125;; 具体实现二叉树就不写了">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="先随便写写">
-<meta property="og:url" content="http://www.djangoz.com/2017/08/12/wirte-something/index.html">
+<meta property="og:title" content="求二叉树的最大深度和最小深度">
+<meta property="og:url" content="http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/index.html">
 <meta property="og:site_name" content="Djangoz&#39;s blog">
-<meta property="og:description" content="A ton of text to test readability.">
+<meta property="og:description" content="运用递归的思想实现起来简单很多。 二叉树的定义123456struct TreeNode&amp;#123;    int val;    TreeNode *left,*right;    TreeNode()&amp;#123;&amp;#125;    TreeNode(int _val):val(_val),left(NULL),right(NULL)&amp;#123;&amp;#125;&amp;#125;; 具体实现二叉树就不写了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-17T08:47:42.000Z">
+<meta property="og:updated_time" content="2017-08-17T09:01:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="先随便写写">
-<meta name="twitter:description" content="A ton of text to test readability.">
+<meta name="twitter:title" content="求二叉树的最大深度和最小深度">
+<meta name="twitter:description" content="运用递归的思想实现起来简单很多。 二叉树的定义123456struct TreeNode&amp;#123;    int val;    TreeNode *left,*right;    TreeNode()&amp;#123;&amp;#125;    TreeNode(int _val):val(_val),left(NULL),right(NULL)&amp;#123;&amp;#125;&amp;#125;; 具体实现二叉树就不写了">
     
         <link rel="alternate" type="application/atom+xml" title="Djangoz&#39;s blog" href="/atom.xml">
     
@@ -137,7 +137,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">先随便写写</div>
+        <div class="flex-col header-title ellipsis">求二叉树的最大深度和最小深度</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -159,11 +159,11 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">先随便写写</h1>
+        <h1 class="title">求二叉树的最大深度和最小深度</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-08-11T16:00:00.000Z" itemprop="datePublished" class="page-time">
-  2017-08-12
+                <time datetime="2017-08-14T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2017-08-15
 </time>
 
 
@@ -179,13 +179,20 @@ ga('send', 'pageview');
 
 <div class="container body-wrap">
     
-<article id="post-wirte-something"
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二叉树的定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">二叉树的定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#求二叉树的最大深度"><span class="post-toc-number">2.</span> <span class="post-toc-text">求二叉树的最大深度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#求二叉树的最小深度"><span class="post-toc-number">3.</span> <span class="post-toc-text">求二叉树的最小深度</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Depth-of-Binary-tree"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">先随便写写</h1>
+        <h1 class="post-card-title">求二叉树的最大深度和最小深度</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-08-12 00:00:00" datetime="2017-08-11T16:00:00.000Z"  itemprop="datePublished">2017-08-12</time>
+            <time class="post-time" title="2017-08-15 00:00:00" datetime="2017-08-14T16:00:00.000Z"  itemprop="datePublished">2017-08-15</time>
 
             
 
@@ -198,7 +205,11 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>　　今天终于学会在静态网站上安装插件了(其实也不算，是直接用的别人的主题)，原来也不难，昨天弄了老半天都没弄出来<br>　　还是写一写方法吧<br>　　(⊙o⊙)…还是以后在写吧，现在还不会用markdown写文档<br>　　初学者什么都不会~~o(&gt;_&lt;)o ~~<br>　　还是直接贴我参考的地方吧<a href="http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html" target="_blank" rel="external">在GitHub页面上使用Jekyll插件</a><br>  　　把主题<a href="https://github.com/mmistakes/made-mistakes-jekyll" target="_blank" rel="external">作者的github项目主页</a>贴一下，表示感谢</p>
+            <p>运用递归的思想实现起来简单很多。</p>
+<h3 id="二叉树的定义"><a href="#二叉树的定义" class="headerlink" title="二叉树的定义"></a>二叉树的定义</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>&#123;</span></div><div class="line">    <span class="keyword">int</span> val;</div><div class="line">    TreeNode *left,*right;</div><div class="line">    TreeNode()&#123;&#125;</div><div class="line">    TreeNode(<span class="keyword">int</span> _val):val(_val),left(<span class="literal">NULL</span>),right(<span class="literal">NULL</span>)&#123;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>具体实现二叉树就不写了。</p>
+<h3 id="求二叉树的最大深度"><a href="#求二叉树的最大深度" class="headerlink" title="求二叉树的最大深度"></a>求二叉树的最大深度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(!root)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(!root-&gt;left) <span class="keyword">return</span> <span class="number">1</span>+maxDepth(root-&gt;right);</div><div class="line">    <span class="keyword">if</span>(!root-&gt;right) <span class="keyword">return</span> <span class="number">1</span>+maxDepth(root-&gt;left);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>+max(maxDepth(root-&gt;left),maxDepth(root-&gt;right));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="求二叉树的最小深度"><a href="#求二叉树的最小深度" class="headerlink" title="求二叉树的最小深度"></a>求二叉树的最小深度</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode* root)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span>(!root)<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(!root-&gt;left) <span class="keyword">return</span> <span class="number">1</span>+minDepth(root-&gt;right);</div><div class="line">    <span class="keyword">if</span>(!root-&gt;right) <span class="keyword">return</span> <span class="number">1</span>+minDepth(root-&gt;left);</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>+min(minDepth(root-&gt;left),minDepth(root-&gt;right));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
         </div>
 
@@ -206,7 +217,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-17T08:47:42.000Z" itemprop="dateUpdated">2017-08-17 16:47:42</time>
+    最后更新时间：<time datetime="2017-08-17T09:01:54.000Z" itemprop="dateUpdated">2017-08-17 17:01:54</time>
 </span><br>
 
 
@@ -229,7 +240,7 @@ ga('send', 'pageview');
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闲言碎语/">闲言碎语</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
 
 
             
@@ -239,7 +250,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/12/wirte-something/&title=《先随便写写》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -249,22 +260,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/12/wirte-something/&title=《先随便写写》 — Djangoz's blog&source=tech" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&source=tech" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/12/wirte-something/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《先随便写写》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/12/wirte-something/&via=http://www.djangoz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《求二叉树的最大深度和最小深度》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/&via=http://www.djangoz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/12/wirte-something/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -287,18 +298,18 @@ ga('send', 'pageview');
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/08/13/shadowsocks-setup/" id="post-prev" class="post-nav-link">
+      <a href="/2017/08/16/linux_setup_ssr/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">shadowsocks一键安装脚本</h4>
+        <h4 class="title">在linux环境安装shadowsocksR</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/08/11/first-time/" id="post-next" class="post-nav-link">
+      <a href="/2017/08/13/shadowsocks-setup/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">创建博客成功</h4>
+        <h4 class="title">shadowsocks一键安装脚本</h4>
       </a>
     </div>
   
@@ -391,7 +402,7 @@ ga('send', 'pageview');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/12/wirte-something/&title=《先随便写写》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&pic=http://www.djangoz.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -401,22 +412,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/12/wirte-something/&title=《先随便写写》 — Djangoz's blog&source=tech" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/&title=《求二叉树的最大深度和最小深度》 — Djangoz's blog&source=tech" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/12/wirte-something/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《先随便写写》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/12/wirte-something/&via=http://www.djangoz.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《求二叉树的最大深度和最小深度》 — Djangoz's blog&url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/&via=http://www.djangoz.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/12/wirte-something/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -427,7 +438,7 @@ ga('send', 'pageview');
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQU7EMAwFUO5/6bJFAtr/nYLU5mU1Ykrq14Wnsf3xEa/jy7r3+q/XtHepFwYGxmMZx+k6v+auEL9fmceGgYGxD2O2df5fCTXfAQMDA6NNgsk+5+H+diUGBgbGjLGSLs8DxcDAwDhnJIfY5IB6Hnry7Z+fxTEwMB7IyKvu///5T/obGBgYj2Ic5WoPq3m6PBYWBgbGuxlt+b59ZZzt08aDgYHxbkbSjEyal0VaLNsAUVMBAwNjS0ZbMst3awONWggYGBgbMOpmYVzQbwOaDZ9hYGDsybiLlBTgEvZF6sfAwNiAMRuzaAcgkpSa/+W2aREMDIxHMdYLausvi8kPwA+fMTAwNmDMBlKHpbG4qVkU4zAwMDZgzBqHeVLOWwjtgbnuLWBgYDycsYJpU3BxQE0GxTAwMDZg5IOns47hXa3KpWELDAyMhzPylJonxIsUGT+s6OFiYGBswJgdL2epduUu0cwIBgbG6xh54axtNK63KvODNAYGxj6MdhhrJVnn4xdFbQ0DA2MDRnuzWek/P8TWh2QMDIzNGO14xCzctiR3McyBgYHxUsZRrlmx7HyH5NuLx42BgfFqxnqyyw+3s4ZofujFwMB4NyNPsuv5LS+01TFgYGBswChK8MnoQzww0T6mi/dcDAwMjDJFrqTUus2AgYGBUY5QzALNk2zR38DAwHgR495SfhtuUsjDwMDYmdGmvJXS2F0lvOEOGBgYz2N8AsIn2xn2DU6lAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIElEQVR42u3awY7DIAxF0f7/T2ekbquQ++xkpJjLqgoK4bBwwebzwe34tt8nv+2s92zMs7c+TzQZMmS8lnEs25qRTojj+dxkyJCxD2MdZNcwgqzhydxkyJAh4wkq2TLKkCFDRifg9o+mfBsqQ4YMGekhtvbh9VF2nZ575CwuQ4aMFzLSwsB//n6wviFDhoyXMI6w3RsE+ZgXX5QhQ8ZoBt/M9dP6JPXWKRXIkCFjKiNNiq0Poncl5vhXZMiQsQ8jSL7jt/q9wQgyZMgYzSDpLRLy0o0dD7X8WzJkyJjN4JgU1ikwpCPIkCFjKqM2KL9y0bmcESycDBkyRjPS10hvLWgGmz9+IpchQ8YIBile8uDIr2XwFBt6LkOGjC0Z/GPppbE0iKOZyJAhYzNGJxFGWicld7G3lSFDxmYM0suvdqUhO15QGTJkjGYUA1yJ8cRbvTgtQ4aMNzF4wE0PpTyhxouj6V+CDBkyJjGKSflworWDbjCmDBkyxjFqE+ITrZUH4k2kDBkyNmD0pxiUG8NFiQsDMmTIGMfgaSxyvCQh9cEknQwZMoYyjrCRDWWnqFBLz8mQIWM2o58Cq10g45c8yPLJkCFjBwYPsrzYyZ/zlN/F2suQIWMDRhpk06JCv6FCpgwZMrZnpEjeS/4AUGFAhgwZMsKiZm2c2iUMGTJk7MC4d9vHywm1ES4uW8iQIWMco1MY4AGRh+N+cVSGDBmDGH/j0/oIATQlQwAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
