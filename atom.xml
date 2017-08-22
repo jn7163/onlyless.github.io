@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Djangoz&#39;s blog</title>
+  <title>Django&#39;s blog</title>
   <subtitle>Just for fun.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://www.djangoz.com/</id>
   
   <author>
-    <name>Djangoz</name>
+    <name>Django</name>
     
   </author>
   
