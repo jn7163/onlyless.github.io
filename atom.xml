@@ -47,18 +47,18 @@
   </entry>
   
   <entry>
-    <title>Windows cmd使用shell命令</title>
-    <link href="http://www.djangoz.com/2017/09/28/windows_use_shell/"/>
-    <id>http://www.djangoz.com/2017/09/28/windows_use_shell/</id>
+    <title>Windows cmd使用常用bash命令</title>
+    <link href="http://www.djangoz.com/2017/09/28/windows_use_bash/"/>
+    <id>http://www.djangoz.com/2017/09/28/windows_use_bash/</id>
     <published>2017-09-27T16:00:00.000Z</published>
-    <updated>2017-09-28T13:52:20.381Z</updated>
+    <updated>2017-10-01T13:49:22.069Z</updated>
     
-    <content type="html"><![CDATA[<p>windows的cmd命令用起来不顺手，Linux系的shell命令酸爽多了。<br>首先下载<a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a>，一般来说都有这个软件，有的话忽略。<br>然后找到git的安装路径，我电脑git安装在D盘的<br><img src="images/1.png"><br><br>然后进入usr目录，再进入bin目录，把该目录链接添加一个环境变量。保存就可以了<br><img src="images/2.png"><br><br>然后就可以愉快的使用shell命令了，瞬间酸爽许多。<br>ls rm mkdir等等都可以完美使用.<br><strong>最主要的是可以使用vim，让cmd瞬间强大了许多,有木有!!!<br><img src="images/3.png"><br></strong></p>
+    <content type="html"><![CDATA[<p>windows的cmd命令用起来不顺手，Linux系的bash命令酸爽多了。<br>首先下载<a href="https://git-scm.com/download/win" target="_blank" rel="external">git</a>，一般来说都有这个软件，有的话忽略。<br>然后找到git的安装路径，我电脑git安装在D盘的<br><img src="images/1.png"><br><br>然后进入usr目录，再进入bin目录，把该目录链接添加一个环境变量。保存就可以了<br><img src="images/2.png"><br><br>然后就可以愉快的使用bash命令了，瞬间酸爽许多。<br>ls rm mkdir等等都可以完美使用.<br><strong>最主要的是可以使用vim，让cmd瞬间强大了许多,有木有!!!<br><img src="images/3.png"><br></strong></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;windows的cmd命令用起来不顺手，Linux系的shell命令酸爽多了。&lt;br&gt;首先下载&lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git&lt;/a&gt;，一般来说都有这个
+      &lt;p&gt;windows的cmd命令用起来不顺手，Linux系的bash命令酸爽多了。&lt;br&gt;首先下载&lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git&lt;/a&gt;，一般来说都有这个软
     
     </summary>
     
