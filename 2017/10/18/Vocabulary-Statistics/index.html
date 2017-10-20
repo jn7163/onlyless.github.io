@@ -44,7 +44,7 @@ ga('send', 'pageview');
 <meta property="og:site_name" content="Django&#39;s blog">
 <meta property="og:description" content="想起高中的时候英语一直很差，后来发现背英语中出现频率最高的单词是一种很高效的学习方法，于是现在写出来一个小程序 github项目地址(如果觉得这个程序好，求个star)这个小程序可以统计文件input.txt文本中所有英文单词的词频（由高到低排序），并给出每个单词的翻译这个程序有两种方法，第一种用goole-cloud库，收费的，不过运行时间快一些，第二种模拟网页请求，时间略长,不能大量翻译.本程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-18T02:51:12.938Z">
+<meta property="og:updated_time" content="2017-10-20T03:18:07.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="统计文本中单词频率">
 <meta name="twitter:description" content="想起高中的时候英语一直很差，后来发现背英语中出现频率最高的单词是一种很高效的学习方法，于是现在写出来一个小程序 github项目地址(如果觉得这个程序好，求个star)这个小程序可以统计文件input.txt文本中所有英文单词的词频（由高到低排序），并给出每个单词的翻译这个程序有两种方法，第一种用goole-cloud库，收费的，不过运行时间快一些，第二种模拟网页请求，时间略长,不能大量翻译.本程">
@@ -214,7 +214,7 @@ ga('send', 'pageview');
 <p>github<a href="https://github.com/onlyless/Vocabulary-Statistics" target="_blank" rel="external">项目地址</a>(如果觉得这个程序好，求个star)<br>这个小程序可以统计文件input.txt文本中所有英文单词的词频（由高到低排序），并给出每个单词的翻译<br>这个程序有两种方法，第一种用goole-cloud库，收费的，不过运行时间快一些，第二种模拟网页请求，时间略长,不能大量翻译.<br>本程序用的两种方法都可以运行，第一种在本机运行后，超出了免费翻译次数，于是就用的第二种，要用第一种的话，把源代码中注释的代码取消注释即可，再把第二种的注释就可以了</p>
 <h3 id="一-运行前需要安装google-cloud库-并安装Google-Cloud-SDK"><a href="#一-运行前需要安装google-cloud库-并安装Google-Cloud-SDK" class="headerlink" title="一.运行前需要安装google-cloud库,并安装Google Cloud SDK"></a>一.运行前需要安装google-cloud库,并安装Google Cloud SDK</h3><h4 id="1-安装相关模块"><a href="#1-安装相关模块" class="headerlink" title="1.安装相关模块"></a>1.安装相关模块</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install --upgrade google-cloud-translate</div></pre></td></tr></table></figure>
 <h4 id="2-调用api进行翻译之前，需要安装相关证书"><a href="#2-调用api进行翻译之前，需要安装相关证书" class="headerlink" title="2.调用api进行翻译之前，需要安装相关证书"></a>2.调用api进行翻译之前，需要安装相关证书</h4><p>安装  <a href="https://cloud.google.com/sdk/" target="_blank" rel="external">Google Cloud SDK</a><br>因为在本地上运行，使用的第一种方式，安装之后会有自动弹出验证邮箱的界面，如果没有在Google cloud sdk shell  运行<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gcloud auth application-default login</div></pre></td></tr></table></figure></p>
-<h3 id="二-使用urllib取googletranslate"><a href="#二-使用urllib取googletranslate" class="headerlink" title="二.使用urllib取googletranslate"></a>二.使用urllib取googletranslate</h3><p>模拟一个头文件，请求到translate.google.com去，然后解析出翻译文本</p>
+<h3 id="二-使用urllib取googletranslate"><a href="#二-使用urllib取googletranslate" class="headerlink" title="二.使用urllib取googletranslate"></a>二.使用urllib取googletranslate</h3><p>模拟一个头部，请求到translate.google.com去，然后解析出翻译文本</p>
 <h3 id="运行方式"><a href="#运行方式" class="headerlink" title="运行方式"></a>运行方式</h3><p>把将要统计的文本放入Input.txt文件中，直接运行</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python word.py</div></pre></td></tr></table></figure>
 <p>即可</p>
@@ -226,7 +226,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-10-18T02:51:12.938Z" itemprop="dateUpdated">2017-10-18 10:51:12</time>
+    最后更新时间：<time datetime="2017-10-20T03:18:07.928Z" itemprop="dateUpdated">2017-10-20 11:18:07</time>
 </span><br>
 
 
