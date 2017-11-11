@@ -4,9 +4,9 @@
   <subtitle>Just for fun.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.djangoz.com/"/>
+  <link href="https://www.djangoz.com/"/>
   <updated>2017-10-31T14:56:55.106Z</updated>
-  <id>http://www.djangoz.com/</id>
+  <id>https://www.djangoz.com/</id>
   
   <author>
     <name>Django</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>湖北工业大学教务系统查分,查课小程序</title>
-    <link href="http://www.djangoz.com/2017/10/27/Login_hbut/"/>
-    <id>http://www.djangoz.com/2017/10/27/Login_hbut/</id>
+    <link href="https://www.djangoz.com/2017/10/27/Login_hbut/"/>
+    <id>https://www.djangoz.com/2017/10/27/Login_hbut/</id>
     <published>2017-10-26T16:00:00.000Z</published>
     <updated>2017-10-31T14:56:55.106Z</updated>
     
@@ -38,17 +38,17 @@
     
     </summary>
     
-      <category term="python" scheme="http://www.djangoz.com/categories/python/"/>
+      <category term="python" scheme="https://www.djangoz.com/categories/python/"/>
     
     
-      <category term="小程序" scheme="http://www.djangoz.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://www.djangoz.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>统计文本中单词频率</title>
-    <link href="http://www.djangoz.com/2017/10/18/Vocabulary-Statistics/"/>
-    <id>http://www.djangoz.com/2017/10/18/Vocabulary-Statistics/</id>
+    <link href="https://www.djangoz.com/2017/10/18/Vocabulary-Statistics/"/>
+    <id>https://www.djangoz.com/2017/10/18/Vocabulary-Statistics/</id>
     <published>2017-10-17T16:00:00.000Z</published>
     <updated>2017-10-27T07:20:06.923Z</updated>
     
@@ -70,17 +70,17 @@
     
     </summary>
     
-      <category term="python" scheme="http://www.djangoz.com/categories/python/"/>
+      <category term="python" scheme="https://www.djangoz.com/categories/python/"/>
     
     
-      <category term="小程序" scheme="http://www.djangoz.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://www.djangoz.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>可识别括号优先级的简易计算器</title>
-    <link href="http://www.djangoz.com/2017/09/30/simple-calculator/"/>
-    <id>http://www.djangoz.com/2017/09/30/simple-calculator/</id>
+    <link href="https://www.djangoz.com/2017/09/30/simple-calculator/"/>
+    <id>https://www.djangoz.com/2017/09/30/simple-calculator/</id>
     <published>2017-09-29T16:00:00.000Z</published>
     <updated>2017-10-27T07:33:49.826Z</updated>
     
@@ -101,17 +101,17 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.djangoz.com/categories/java/"/>
+      <category term="java" scheme="https://www.djangoz.com/categories/java/"/>
     
     
-      <category term="小程序" scheme="http://www.djangoz.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="小程序" scheme="https://www.djangoz.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>Windows cmd使用常用bash命令</title>
-    <link href="http://www.djangoz.com/2017/09/28/windows_use_bash/"/>
-    <id>http://www.djangoz.com/2017/09/28/windows_use_bash/</id>
+    <link href="https://www.djangoz.com/2017/09/28/windows_use_bash/"/>
+    <id>https://www.djangoz.com/2017/09/28/windows_use_bash/</id>
     <published>2017-09-27T16:00:00.000Z</published>
     <updated>2017-10-01T13:49:22.069Z</updated>
     
@@ -125,14 +125,14 @@
     </summary>
     
     
-      <category term="技巧" scheme="http://www.djangoz.com/tags/%E6%8A%80%E5%B7%A7/"/>
+      <category term="技巧" scheme="https://www.djangoz.com/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
     <title>并查集(Union-Find)算法介绍</title>
-    <link href="http://www.djangoz.com/2017/09/12/union-find/"/>
-    <id>http://www.djangoz.com/2017/09/12/union-find/</id>
+    <link href="https://www.djangoz.com/2017/09/12/union-find/"/>
+    <id>https://www.djangoz.com/2017/09/12/union-find/</id>
     <published>2017-09-11T16:00:00.000Z</published>
     <updated>2017-10-27T07:33:37.575Z</updated>
     
@@ -188,17 +188,17 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.djangoz.com/categories/java/"/>
+      <category term="java" scheme="https://www.djangoz.com/categories/java/"/>
     
     
-      <category term="算法与数据结构" scheme="http://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="算法与数据结构" scheme="https://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>java实现简易的queue</title>
-    <link href="http://www.djangoz.com/2017/09/09/queue-in-java/"/>
-    <id>http://www.djangoz.com/2017/09/09/queue-in-java/</id>
+    <link href="https://www.djangoz.com/2017/09/09/queue-in-java/"/>
+    <id>https://www.djangoz.com/2017/09/09/queue-in-java/</id>
     <published>2017-09-08T16:00:00.000Z</published>
     <updated>2017-10-27T07:33:07.331Z</updated>
     
@@ -213,17 +213,17 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.djangoz.com/categories/java/"/>
+      <category term="java" scheme="https://www.djangoz.com/categories/java/"/>
     
     
-      <category term="算法与数据结构" scheme="http://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="算法与数据结构" scheme="https://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>java实现简易的stack</title>
-    <link href="http://www.djangoz.com/2017/09/09/stack-in-java/"/>
-    <id>http://www.djangoz.com/2017/09/09/stack-in-java/</id>
+    <link href="https://www.djangoz.com/2017/09/09/stack-in-java/"/>
+    <id>https://www.djangoz.com/2017/09/09/stack-in-java/</id>
     <published>2017-09-08T16:00:00.000Z</published>
     <updated>2017-10-27T07:33:26.264Z</updated>
     
@@ -238,17 +238,17 @@
     
     </summary>
     
-      <category term="java" scheme="http://www.djangoz.com/categories/java/"/>
+      <category term="java" scheme="https://www.djangoz.com/categories/java/"/>
     
     
-      <category term="算法与数据结构" scheme="http://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="算法与数据结构" scheme="https://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>windows下访问linux分区文件</title>
-    <link href="http://www.djangoz.com/2017/08/18/windows-to-linux/"/>
-    <id>http://www.djangoz.com/2017/08/18/windows-to-linux/</id>
+    <link href="https://www.djangoz.com/2017/08/18/windows-to-linux/"/>
+    <id>https://www.djangoz.com/2017/08/18/windows-to-linux/</id>
     <published>2017-08-18T03:27:50.000Z</published>
     <updated>2017-08-24T14:33:36.468Z</updated>
     
@@ -262,14 +262,14 @@
     </summary>
     
     
-      <category term="linux" scheme="http://www.djangoz.com/tags/linux/"/>
+      <category term="linux" scheme="https://www.djangoz.com/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>更换主题</title>
-    <link href="http://www.djangoz.com/2017/08/17/change-theme/"/>
-    <id>http://www.djangoz.com/2017/08/17/change-theme/</id>
+    <link href="https://www.djangoz.com/2017/08/17/change-theme/"/>
+    <id>https://www.djangoz.com/2017/08/17/change-theme/</id>
     <published>2017-08-17T10:10:16.000Z</published>
     <updated>2017-08-24T14:33:30.159Z</updated>
     
@@ -283,14 +283,14 @@
     </summary>
     
     
-      <category term="闲言碎语" scheme="http://www.djangoz.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+      <category term="闲言碎语" scheme="https://www.djangoz.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>在linux环境安装shadowsocksR客户端</title>
-    <link href="http://www.djangoz.com/2017/08/16/linux_setup_ssr/"/>
-    <id>http://www.djangoz.com/2017/08/16/linux_setup_ssr/</id>
+    <link href="https://www.djangoz.com/2017/08/16/linux_setup_ssr/"/>
+    <id>https://www.djangoz.com/2017/08/16/linux_setup_ssr/</id>
     <published>2017-08-15T16:00:00.000Z</published>
     <updated>2017-08-24T14:33:25.301Z</updated>
     
@@ -304,14 +304,14 @@
     </summary>
     
     
-      <category term="科学上网" scheme="http://www.djangoz.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+      <category term="科学上网" scheme="https://www.djangoz.com/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>求二叉树的最大深度和最小深度</title>
-    <link href="http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/"/>
-    <id>http://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/</id>
+    <link href="https://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/"/>
+    <id>https://www.djangoz.com/2017/08/15/Depth-of-Binary-tree/</id>
     <published>2017-08-14T16:00:00.000Z</published>
     <updated>2017-10-27T07:32:10.609Z</updated>
     
@@ -329,17 +329,17 @@
     
     </summary>
     
-      <category term="c++" scheme="http://www.djangoz.com/categories/c/"/>
+      <category term="c++" scheme="https://www.djangoz.com/categories/c/"/>
     
     
-      <category term="算法与数据结构" scheme="http://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="算法与数据结构" scheme="https://www.djangoz.com/tags/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>先随便写写</title>
-    <link href="http://www.djangoz.com/2017/08/12/wirte-something/"/>
-    <id>http://www.djangoz.com/2017/08/12/wirte-something/</id>
+    <link href="https://www.djangoz.com/2017/08/12/wirte-something/"/>
+    <id>https://www.djangoz.com/2017/08/12/wirte-something/</id>
     <published>2017-08-11T16:00:00.000Z</published>
     <updated>2017-08-24T14:32:49.833Z</updated>
     
@@ -353,14 +353,14 @@
     </summary>
     
     
-      <category term="闲言碎语" scheme="http://www.djangoz.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+      <category term="闲言碎语" scheme="https://www.djangoz.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
     <title>创建博客成功</title>
-    <link href="http://www.djangoz.com/2017/08/11/first-time/"/>
-    <id>http://www.djangoz.com/2017/08/11/first-time/</id>
+    <link href="https://www.djangoz.com/2017/08/11/first-time/"/>
+    <id>https://www.djangoz.com/2017/08/11/first-time/</id>
     <published>2017-08-10T16:00:00.000Z</published>
     <updated>2017-08-24T14:32:15.892Z</updated>
     
@@ -375,7 +375,7 @@
     </summary>
     
     
-      <category term="闲言碎语" scheme="http://www.djangoz.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+      <category term="闲言碎语" scheme="https://www.djangoz.com/tags/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
   </entry>
   
