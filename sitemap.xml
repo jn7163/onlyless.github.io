@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.djangoz.com/2017/08/16/linux_setup_ssr/</loc>
+    
+    <lastmod>2017-11-15T14:27:13.133Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.djangoz.com/links/index.html</loc>
     
     <lastmod>2017-11-09T13:49:40.058Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>https://www.djangoz.com/2017/08/17/change-theme/</loc>
     
     <lastmod>2017-08-24T14:33:30.159Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.djangoz.com/2017/08/16/linux_setup_ssr/</loc>
-    
-    <lastmod>2017-08-24T14:33:25.301Z</lastmod>
     
   </url>
   
