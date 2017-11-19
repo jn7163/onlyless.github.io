@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.djangoz.com/"/>
-  <updated>2017-11-19T06:54:57.423Z</updated>
+  <updated>2017-11-19T13:55:03.716Z</updated>
   <id>https://www.djangoz.com/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="https://www.djangoz.com/2017/11/19/idea-uml/"/>
     <id>https://www.djangoz.com/2017/11/19/idea-uml/</id>
     <published>2017-11-18T16:00:00.000Z</published>
-    <updated>2017-11-19T06:54:57.423Z</updated>
+    <updated>2017-11-19T13:55:03.716Z</updated>
     
-    <content type="html"><![CDATA[<!-- build time:Sun Nov 19 2017 14:57:51 GMT+0800 (中国标准时间) --><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>平时写java代码的时候，代码经常会显得很长，很不容易看出Java类之间的关系<br>后来发现IDEA有一个很棒的功能，可以直接根据代码来查看改文件内的类UML关系图</p><h4 id="先去设置里面打开查看UML功能"><a href="#先去设置里面打开查看UML功能" class="headerlink" title="先去设置里面打开查看UML功能"></a>先去设置里面打开查看UML功能</h4><p>setting-&gt;plugins-&gt;搜索UML即可<br>把搜索出来这个插件选上<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-1.png" alt=""></div><div class="image-caption"></div></figure><p></p><h4 id="查看java源代码内的类关系UML图"><a href="#查看java源代码内的类关系UML图" class="headerlink" title="查看java源代码内的类关系UML图"></a>查看java源代码内的类关系UML图</h4><p>双击shift键打开keymap，然后搜索UML,选择Show Local Changes as UML<br>直接按快捷键Ctrl+Alt+Shift+D也可以<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-2.png" alt=""></div><div class="image-caption"></div></figure><br><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-3.png" alt=""></div><div class="image-caption"></div></figure><br>在UML图内点击鼠标右键，Show Categories,可切换查看各个类的属性和概括图<br><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-4.png" alt=""></div><div class="image-caption"></div></figure><p></p><h4 id="查看类UML图可以放大"><a href="#查看类UML图可以放大" class="headerlink" title="查看类UML图可以放大"></a>查看类UML图可以放大</h4><p>觉得生成的UML图小？这都不是问题，按Alt键，即可放大查看UML图<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-5.png" alt=""></div><div class="image-caption"></div></figure><p></p><!-- rebuild by neat -->]]></content>
+    <content type="html"><![CDATA[<!-- build time:Sun Nov 19 2017 21:55:25 GMT+0800 (中国标准时间) --><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>平时写java代码的时候，代码经常会显得很长，很不容易看出Java类之间的关系<br>后来发现IDEA有一个很棒的功能，可以直接根据代码来查看改文件内的类UML关系图</p><h4 id="先去设置里面打开查看UML功能"><a href="#先去设置里面打开查看UML功能" class="headerlink" title="先去设置里面打开查看UML功能"></a>先去设置里面打开查看UML功能</h4><p>setting-&gt;plugins-&gt;搜索UML即可<br>把搜索出来这个插件选上<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-1.png" alt=""></div><div class="image-caption"></div></figure><p></p><h4 id="查看java源代码内的类关系UML图"><a href="#查看java源代码内的类关系UML图" class="headerlink" title="查看java源代码内的类关系UML图"></a>查看java源代码内的类关系UML图</h4><p>双击shift键打开keymap，然后搜索UML,选择Show Local Changes as UML<br>直接按快捷键Ctrl+Alt+Shift+D也可以<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-2.png" alt=""></div><div class="image-caption"></div></figure><br><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-3.png" alt=""></div><div class="image-caption"></div></figure><br>在UML图内点击鼠标右键，Show Categories,可切换查看各个类的属性和概括图<br><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-4.png" alt=""></div><div class="image-caption"></div></figure><p></p><h4 id="查看类UML图可以放大"><a href="#查看类UML图可以放大" class="headerlink" title="查看类UML图可以放大"></a>查看类UML图可以放大</h4><p>觉得生成的UML图小？这都不是问题，按Alt键，即可放大查看UML图<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-5.png" alt=""></div><div class="image-caption"></div></figure><p></p><h4 id="查看整个文件夹下的所有java类UML关系图"><a href="#查看整个文件夹下的所有java类UML关系图" class="headerlink" title="查看整个文件夹下的所有java类UML关系图"></a>查看整个文件夹下的所有java类UML关系图</h4><p>写java的时候通常不会把所有类放在一个源文件里面，这时候就需要查看整个文件夹内的Java类关系图了<br>而IDEA一样能做到，在左边的Project视图里面鼠标右键将要查看的文件夹，选择Diagrams-&gt;Show Diagrams-&gt;Java Class Diagrams即可<br></p><figure class="image-bubble"><div class="img-lightbox"><div class="overlay"></div><img src="/img/UML-6.png" alt=""></div><div class="image-caption"></div></figure><p></p><!-- rebuild by neat -->]]></content>
     
     <summary type="html">
     
-      &lt;!-- build time:Sun Nov 19 2017 14:57:51 GMT+0800 (中国标准时间) --&gt;&lt;h4 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h4&gt;&lt;p&gt;平时写java代
+      &lt;!-- build time:Sun Nov 19 2017 21:55:25 GMT+0800 (中国标准时间) --&gt;&lt;h4 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h4&gt;&lt;p&gt;平时写java代
     
     </summary>
     
